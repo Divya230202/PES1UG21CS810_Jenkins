@@ -12,6 +12,7 @@ pipeline{
                       sh './PES1UG21CS810'
                       echo 'Test stage successful'
                    }
+             }}}
               }
              stage('Deploy'){
                   steps{
@@ -20,6 +21,7 @@ pipeline{
                    }
               }
            }
+}mnjjb
           post{
              failure{
                  echo 'Pipeline Failed'
