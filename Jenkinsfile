@@ -3,7 +3,8 @@ pipeline{
           stages{
             stage('Build'){
                  steps{
-
+                     sh 'g++ -c main/hello.cpp'
+                     sh 'g++ -o PES1UG21CS810 main/hello.cpp'
                      echo 'Build stage successfull'
                  }
              }
@@ -12,16 +13,14 @@ pipeline{
                       sh './PES1UG21CS810'
                       echo 'Test stage successful'
                    }
-             }}}
               }
              stage('Deploy'){
                   steps{
 
-                     echo 'Deployment Successful'
+                     echo 'Deployment Successful'.
                    }
               }
            }
-}mnjjb
           post{
              failure{
                  echo 'Pipeline Failed'
